@@ -1,4 +1,4 @@
-package io.hotaka.formacion.summbistro.api
+package io.hotaka.formacion.scummbistro.api
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

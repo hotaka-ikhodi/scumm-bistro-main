@@ -1,4 +1,4 @@
-package io.hotaka.formacion.summbistro.api
+package io.hotaka.formacion.scummbistro.api
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
