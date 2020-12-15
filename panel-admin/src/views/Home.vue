@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/img/Hotaka_800x237.png" />
+    <img alt="Hotaka" src="../assets/img/Hotaka_800x237.png" />
     <HelloWorld msg="Bienvenidos a la formación Hotaka" />
   </div>
 </template>

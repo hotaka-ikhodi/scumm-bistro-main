@@ -1,25 +1,37 @@
 <template>
-  <div id="app">
+  <!-- <el-menu class="el-menu-demo" mode="horizontal">
+      <el-menu-item index="1"
+        ><router-link to="/">Panel Admin</router-link></el-menu-item
+      >
+      <el-menu-item index="4"
+        ><router-link to="/dishes">Dishes</router-link></el-menu-item
+      >
+    </el-menu>
     <el-container>
-      <el-header>
-        <el-menu class="el-menu-demo" mode="horizontal">
-          <el-menu-item index="1"
-            ><router-link to="/">Panel Admin</router-link></el-menu-item
-          >
-          <el-menu-item index="4"
-            ><router-link to="/dishes">Dishes</router-link></el-menu-item
-          >
-        </el-menu>
-      </el-header>
       <el-main>
         <router-view />
       </el-main>
       <el-footer> </el-footer>
+    </el-container> -->
+  <el-container id="app" class="app-container">
+    <side-bar />
+    <el-container>
+      <el-header class="header-page"><header-page /></el-header>
+      <el-main><router-view /></el-main>
+      <el-footer class="footer-page"><footer-page /></el-footer>
     </el-container>
-  </div>
+  </el-container>
 </template>
 <script>
+import SideBar from "./components/layout/SideBar";
+import FooterPage from "./components/layout/FooterPage";
+import HeaderPage from "./components/layout/HeaderPage";
 export default {
+  components: {
+    SideBar,
+    HeaderPage,
+    FooterPage,
+  },
   methods: {
     goBack() {
       console.log("go back");
