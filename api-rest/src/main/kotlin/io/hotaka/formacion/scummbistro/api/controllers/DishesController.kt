@@ -16,10 +16,14 @@ class DishesController(val dishRepository: IDishRepository) {
     @GetMapping
     fun findAll(@RequestParam(defaultValue = "0") page: Int,
                 @RequestParam(defaultValue = "10") size: Int,
-                @RequestParam(defaultValue = "name") sort: String,
+                @RequestParam(defaultValue = "nombre") sort: String,
                 @RequestParam(defaultValue = "asc") direction: String) : Page<Dish>?{
         val paging = PageRequest.of(page, size, Sort.by(Sort.Direction.fromString(direction), sort))
-        return null
+        return  dishRepository.findAll(paging)
+    }
+    @GetMapping("/{id}")
+    fun findById(@PathVariable(value = "id") id: Long): Dish? {
+        return dishRepository.findById(id).orElse(null);
     }
     @PostMapping
     fun saveDish(@RequestBody dish: Dish) : Dish?{

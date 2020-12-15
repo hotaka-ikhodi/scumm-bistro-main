@@ -26,6 +26,7 @@ dependencies {
 	implementation("io.springfox:springfox-swagger2:3.0.0")
 	implementation("io.springfox:springfox-boot-starter:3.0.0")
 	implementation("io.springfox:springfox-swagger-ui:3.0.0")
+	implementation("com.microsoft.sqlserver:mssql-jdbc:8.4.1.jre11")
 }
 
 tasks.withType<KotlinCompile> {
